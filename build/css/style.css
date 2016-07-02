@@ -4,7 +4,7 @@
 }
 .signInBlueSmall{
   background-color: #3e3ebc;
-  width: 9.4%;
+  width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -14,7 +14,7 @@
 }
 .signInBlueMedium{
   background-color: #3e3ebc;
-  width: 9.4%;
+  width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -25,7 +25,7 @@
 }
 .signInBlueLarge{
   background-color: #3e3ebc;
-  width: 9.4%;
+  width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -36,7 +36,7 @@
 }
 .signInLightBlueSmall{
   background-color: #6f7af2;
-  width: 9.4%;
+  width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -46,7 +46,7 @@
 }
 .signInLightBlueMedium{
   background-color: #6f7af2;
-  width: 9.4%;
+  width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -57,7 +57,7 @@
 }
 .signInLightBlueLarge{
   background-color: #6f7af2;
-  width: 9.4%;
+  width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -68,7 +68,7 @@
 }
 .signInRedSmall{
   background-color: #dc4e41;
-  width: 9.4%;
+  width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -78,7 +78,7 @@
 }
 .signInRedMedium{
   background-color: #dc4e41;
-  width: 9.4%;
+  width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -89,7 +89,7 @@
 }
 .signInRedLarge{
   background-color: #dc4e41;
-  width: 9.4%;
+  width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -100,7 +100,7 @@
 }
 .signInLightRedSmall{
 	background-color: #ea7064;
-	width: 9.4%;
+	width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -110,7 +110,7 @@
 }
 .signInLightRedMedium{
   background-color: #ea7064;
-  width: 9.4%;
+  width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -121,7 +121,7 @@
 }
 .signInLightRedLarge{
   background-color: #ea7064;
-  width: 9.4%;
+  width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -132,7 +132,7 @@
 }
 .signInGreenSmall{
   background-color: #2d892d;
-  width: 9.4%;
+  width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -142,7 +142,7 @@
 }
 .signInGreenMedium{
   background-color: #2d892d;
-  width: 9.4%;
+  width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -153,7 +153,7 @@
 }
 .signInGreenLarge{
   background-color: #2d892d;
-  width: 9.4%;
+  width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -164,7 +164,7 @@
 }
 .signInLightGreenSmall{
 	background-color: #56b556;
-  width: 9.4%;
+  width: 149px;
   height: 40px;
   border-radius: 2px;
   color: white;
@@ -174,7 +174,7 @@
 }
 .signInLightGreenMedium{
 	background-color: #56b556;
- 	width: 9.4%;
+ 	width: 149px;
   height: 44px;
   border-radius: 2px;
   color: white;
@@ -185,7 +185,7 @@
 }
 .signInLightGreenLarge{
 	background-color: #56b556;
- 	width: 9.4%;
+ 	width: 149px;
   height: 48px;
   border-radius: 2px;
   color: white;
@@ -196,7 +196,7 @@
 }
 .signOutRed{
   border: 3px solid #dc4e41;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: #dc4e41;
   padding: 8px;
@@ -209,7 +209,7 @@
 }
 .signOutBlue{
   border: 3px solid #3e3ebc;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: #3e3ebc;
   padding: 8px;
@@ -222,7 +222,7 @@
 }
 .signOutGreen{
   border: 3px solid #2d892d;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: #2d892d;
   padding: 8px;
@@ -236,7 +236,7 @@
 .signOutLightRed{
 	background-color: #ea7064;
   border: 3px solid #dc4e41;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: white;
   padding: 8px;
@@ -251,7 +251,7 @@
 .signOutLightBlue{
 	background-color: #6f7af2;
   border: 3px solid #3e3ebc;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: white;
   padding: 8px;
@@ -266,7 +266,7 @@
 .signOutLightGreen{
 	background-color: #56b556;
   border: 3px solid #2d892d;
-  width: 3.7%;
+  width: 58px;
   height: 19px;
   color: white;
   padding: 8px;
