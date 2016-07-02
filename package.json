@@ -1,6 +1,6 @@
 {
   "name": "angular-google-auth2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This angular js directive plugin helps one to implement the google auth2 sign-in and sign-out features in web apps, mobile apps developed using angular js",
   "main": "index.js",
   "scripts": {
