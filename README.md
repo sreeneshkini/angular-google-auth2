@@ -5,7 +5,7 @@
 - [About](#about)
 - [Installation](#installation)
 - [Documentation](#documentation)
-- [License](#licence)
+- [License](#license)
 
 
 ## About
@@ -74,7 +74,7 @@ var auth2Demo = angular.module('myApp', ['angular-google-auth2','ngRoute']);
 
 * To use <b>s-sign-out</b> directive, include the following inside your home.html page[or any page you like the logout button to be] (This will create sign out button along with it's functionality) -
 
-	```
+  ```
     <div class="signOutGreen" s-sign-out></div>
     ```
     - <b>class</b> - This plugin provides with a set of custom css classes for sign-out button
@@ -82,21 +82,22 @@ var auth2Demo = angular.module('myApp', ['angular-google-auth2','ngRoute']);
 
 * Your login.html will be having corresponding controller, say, 'LoginController'. Include the following line of code in your html page and controller -
 
+login.html
+
 ```html
-<!-----------------------------login.html--------------------------------->
 <div ng-controller="LoginController">
-	<h3>{{displayLogin}}</h3>
-	<div class="signInGreenLarge" s-sign-in client="xxxxxxxxxxxxxxxxxxxxxxxxxxx"    	hd="gmail.com,yahoo.com" redirect="home" thirdparty="no" emailvalidate="emails">
+  <h3>{{displayLogin}}</h3>
+  <div class="signInGreenLarge" s-sign-in client="xxxxxxxxxxxxxxxxxxxxxxxxxxx"      hd="gmail.com,yahoo.com" redirect="home" thirdparty="no" emailvalidate="emails">
 </div>
 ```
+LoginController
 
 ```javascript
-/*---------------------------LoginController---------------------------------*/
 auth2Demo.controller('LoginController', ['$scope','S_PersonalData','$location', function($scope, S_PersonalData, $location){
-	if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
-		$location.path("/home");
-	}else{
-		$scope.displayLogin = "This is login page";
+  if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
+    $location.path("/home");
+  }else{
+    $scope.displayLogin = "This is login page";
         $scope.emails = [
             {
               'email' : 'kinisreenesh202@gmail.com',
@@ -104,8 +105,8 @@ auth2Demo.controller('LoginController', ['$scope','S_PersonalData','$location', 
             {
               'email' : 'sreeneshkini202@gmail.com'
             }
-		];
-	}
+    ];
+  }
 }]);
 ```
 1) This plugin provides a service called <b>S_PersonalData</b>. This service provides you with the <b>s_getPersonalData()</b> method, that in turn provides you with following values -
@@ -123,44 +124,49 @@ auth2Demo.controller('LoginController', ['$scope','S_PersonalData','$location', 
 
 * Your home.html will be having corresponding controller, say, 'HomeController'. Include the following line of code in your html and controller -
 
+home.html
+
 ```html
-<!------------------------------home.html--------------------------------->
 <div ng-controller="HomeController">
-	<p>Name : {{name}}</p>
-	<p>Email : {{email}}</p>
-	<p>Profile Pic: </p><img ng-src="{{profileURL}}">
-	<div class="signOutGreen" s-sign-out></div>
+  <p>Name : {{name}}</p>
+  <p>Email : {{email}}</p>
+  <p>Profile Pic: </p><img ng-src="{{profileURL}}">
+  <div class="signOutGreen" s-sign-out></div>
 </div>
 ```
+HomeController
 
 ```javascript
-/*---------------------------HomeController---------------------------------*/
 auth2Demo.controller('HomeController', ['$scope', 'S_PersonalData', '$location', function($scope, S_PersonalData, $location){
-	if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
-		$scope.name = S_PersonalData.s_getPersonalData().name;
-		$scope.email = S_PersonalData.s_getPersonalData().email;
-		$scope.profileURL = S_PersonalData.s_getPersonalData().profile;
-	}else{
-		$location.path("/");
-	}
+  if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
+    $scope.name = S_PersonalData.s_getPersonalData().name;
+    $scope.email = S_PersonalData.s_getPersonalData().email;
+    $scope.profileURL = S_PersonalData.s_getPersonalData().profile;
+  }else{
+    $location.path("/");
+  }
 }]);
 ```
 1) home.html page will be the page that will be accessible after successful login. The controller checks the same whether the user is logged-in or not. If user is logged-in, then you can fetch the required values to display or store in database.
 
 * As mentioned before, if you are using any third party for handling the logout, then you need to manditorily use plugin's <b>S_GeneralData.s_flush()</b> method, which will flush out the plugin's initializations on sign-out. For this you need to use <b>S_GeneralData</b> service in your controller as follows -
 
+HomeController
+
 ```javascript
-<!----------------------------HomeController--------------------------------->
 auth2Demo.controller('HomeController', ['$scope', 'S_PersonalData','S_GeneralData', '$location', function($scope, S_PersonalData, S_GeneralData, $location){
-	if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
-		var your_logout_method = function(){
+  if(S_PersonalData.s_getPersonalData().isLogin == 'yes'){
+        $scope.name = S_PersonalData.s_getPersonalData().name;
+        $scope.email = S_PersonalData.s_getPersonalData().email;
+        $scope.profileURL = S_PersonalData.s_getPersonalData().profile;
+    var your_logout_method = function(){
           // your code if any
           S_GeneralData.s_flush();
           // your code if any
         };
-	}else{
-		$location.path("/");
-	}
+  }else{
+    $location.path("/");
+  }
 }]);
 ```
 
